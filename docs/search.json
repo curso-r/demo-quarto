@@ -7,13 +7,6 @@
     "text": "# install.packages(\"here\")\nhere::here()\n\n[1] \"/Users/clente/Documents/demo-quarto\"\n\nhere::here(\"styles.css\")\n\n[1] \"/Users/clente/Documents/demo-quarto/styles.css\""
   },
   {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "About",
-    "section": "",
-    "text": "About this site\n\n1 + 1\n\n[1] 2"
-  },
-  {
     "objectID": "index.html#bônus-trocar-idioma",
     "href": "index.html#bônus-trocar-idioma",
     "title": "10 Dicas para Quarto",
@@ -75,5 +68,12 @@
     "title": "10 Dicas para Quarto",
     "section": "10. Font Awesome",
     "text": "10. Font Awesome\nquarto install extension quarto-ext/fontawesome"
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "demo-quarto",
+    "section": "",
+    "text": "Um chunk externo\n\n1 + 1\n\n[1] 2"
   }
 ]
