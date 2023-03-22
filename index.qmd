@@ -1,0 +1,107 @@
+---
+title: "10 Dicas para Quarto"
+bibliography: [references.bib, packages.bib]
+params:
+  data: "2023-03-22"
+---
+
+## 01. Caminhos com here()
+
+```{r}
+# install.packages("here")
+here::here()
+here::here("styles.css")
+```
+
+## 02. Bônus! Trocar idioma
+
+No `_quarto.yml`
+
+```         
+lang: pt
+```
+
+## 03. Chunks com `#|`
+
+```{r, out.width="50%", fig.align='center', echo=FALSE, fig.cap="Um gatinho bonitinho"}
+knitr::include_graphics(here::here("images/gato.webp"))
+```
+
+```{r}
+#| out-width: "50%"
+#| fig-align: "center"
+#| echo: false
+#| fig-cap: "Um gatinho bonitinho"
+knitr::include_graphics(here::here("images/gato.webp"))
+```
+
+Podemos usar `knitr::convert_chunk_header()`
+
+## 04. Citações no Visual Editor
+
+Segundo @turing1937, computadores são possíveis. Segundo @stoica2018, redes sociais não são muito legais. Tidyverse: @tidyverse2019 e @R-tidyverse. Here: @R-here.
+
+``` r
+knitr::write_bib(c("here", "tidyverse"), "packages.bib")
+```
+
+## 05. Include ou child
+
+{{< include about.qmd >}}
+
+## 06. Usando parâmetros
+
+```{r}
+params$data
+```
+
+## 07. Inline + Formatação
+
+```{r}
+#| echo: false
+especies <- palmerpenguins::penguins |> 
+  dplyr::pull(species) |> 
+  unique() |>
+  knitr::combine_words(and = " e ", oxford_comma = FALSE)
+
+pi_bonitinho <- round(pi, 2)
+pi_reais <- scales::dollar(pi, prefix = "R$ ", decimal.mark = ",", big.mark = ".")
+```
+
+A base dos pinguins tem `r nrow(palmerpenguins::penguins)` linhas. Os pinguins estudados na base são `r especies`. O Pi é mais ou menos `r pi_bonitinho` e isso é Pi reais: `r pi_reais`.
+
+## 08. Personalizar templates
+
+styles.css
+
+## 09. Mermaid
+
+```{mermaid}
+flowchart LR
+  A[Hard edge] --> B(Round edge)
+  B --> C{Decision}
+  C --> D[Result one]
+  C --> E[Result two]
+```
+
+```{mermaid}
+sequenceDiagram
+  participant Alice
+  participant Bob
+  Alice->>John: Hello John, how are you?
+  loop Healthcheck
+    John->>John: Fight against hypochondria
+  end
+  Note right of John: Rational thoughts <br/>prevail!
+  John-->>Alice: Great!
+  John->>Bob: How about you?
+  Bob-->>John: Jolly good!
+```
+
+## 10. Font Awesome
+
+```         
+quarto install extension quarto-ext/fontawesome
+```
+
+{{< fa thumbs-up size=2xl >}}

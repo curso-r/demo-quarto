@@ -1,0 +1,79 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "10 Dicas para Quarto",
+    "section": "",
+    "text": "# install.packages(\"here\")\nhere::here()\n\n[1] \"/Users/clente/Documents/demo-quarto\"\n\nhere::here(\"styles.css\")\n\n[1] \"/Users/clente/Documents/demo-quarto/styles.css\""
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "About this site\n\n1 + 1\n\n[1] 2"
+  },
+  {
+    "objectID": "index.html#bônus-trocar-idioma",
+    "href": "index.html#bônus-trocar-idioma",
+    "title": "10 Dicas para Quarto",
+    "section": "02. Bônus! Trocar idioma",
+    "text": "02. Bônus! Trocar idioma\nNo _quarto.yml\nlang: pt"
+  },
+  {
+    "objectID": "index.html#chunks-com",
+    "href": "index.html#chunks-com",
+    "title": "10 Dicas para Quarto",
+    "section": "03. Chunks com #|",
+    "text": "03. Chunks com #|\n\n\n\n\n\nUm gatinho bonitinho\n\n\n\n\n\n\n\n\n\nUm gatinho bonitinho\n\n\n\n\nPodemos usar knitr::convert_chunk_header()"
+  },
+  {
+    "objectID": "index.html#citações-no-visual-editor",
+    "href": "index.html#citações-no-visual-editor",
+    "title": "10 Dicas para Quarto",
+    "section": "04. Citações no Visual Editor",
+    "text": "04. Citações no Visual Editor\nSegundo Turing (1937), computadores são possíveis. Segundo Stoica, Riederer, e Chaintreau (2018), redes sociais não são muito legais. Tidyverse: Wickham et al. (2019) e Wickham (2023). Here: Müller (2020).\nknitr::write_bib(c(\"here\", \"tidyverse\"), \"packages.bib\")"
+  },
+  {
+    "objectID": "index.html#include-ou-child",
+    "href": "index.html#include-ou-child",
+    "title": "10 Dicas para Quarto",
+    "section": "05. Include ou child",
+    "text": "05. Include ou child\nUm chunk externo\n\n1 + 1\n\n[1] 2"
+  },
+  {
+    "objectID": "index.html#usando-parâmetros",
+    "href": "index.html#usando-parâmetros",
+    "title": "10 Dicas para Quarto",
+    "section": "06. Usando parâmetros",
+    "text": "06. Usando parâmetros\n\nparams$data\n\n[1] \"2023-03-22\""
+  },
+  {
+    "objectID": "index.html#inline-formatação",
+    "href": "index.html#inline-formatação",
+    "title": "10 Dicas para Quarto",
+    "section": "07. Inline + Formatação",
+    "text": "07. Inline + Formatação\n\n\n\nA base dos pinguins tem 344 linhas. Os pinguins estudados na base são Adelie, Gentoo e Chinstrap. O Pi é mais ou menos 3.14 e isso é Pi reais: R$ 3,14."
+  },
+  {
+    "objectID": "index.html#personalizar-templates",
+    "href": "index.html#personalizar-templates",
+    "title": "10 Dicas para Quarto",
+    "section": "08. Personalizar templates",
+    "text": "08. Personalizar templates\nstyles.css"
+  },
+  {
+    "objectID": "index.html#mermaid",
+    "href": "index.html#mermaid",
+    "title": "10 Dicas para Quarto",
+    "section": "09. Mermaid",
+    "text": "09. Mermaid\n\n\n\n\nflowchart LR\n  A[Hard edge] --> B(Round edge)\n  B --> C{Decision}\n  C --> D[Result one]\n  C --> E[Result two]\n\n\n\n\n\n\n\n\n\n\n\n\nsequenceDiagram\n  participant Alice\n  participant Bob\n  Alice->>John: Hello John, how are you?\n  loop Healthcheck\n    John->>John: Fight against hypochondria\n  end\n  Note right of John: Rational thoughts <br/>prevail!\n  John-->>Alice: Great!\n  John->>Bob: How about you?\n  Bob-->>John: Jolly good!"
+  },
+  {
+    "objectID": "index.html#font-awesome",
+    "href": "index.html#font-awesome",
+    "title": "10 Dicas para Quarto",
+    "section": "10. Font Awesome",
+    "text": "10. Font Awesome\nquarto install extension quarto-ext/fontawesome"
+  }
+]

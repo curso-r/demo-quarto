@@ -1,0 +1,14 @@
+{
+  "hash": "cb6232f30b17478bfe7b2406653d8e8b",
+  "result": {
+    "markdown": "---\ntitle: \"10 Dicas para Quarto\"\nbibliography: [references.bib, packages.bib]\nparams:\n  data: \"2023-03-22\"\n---\n\n\n## 01. Caminhos com here()\n\n\n::: {.cell}\n\n```{.r .cell-code}\n# install.packages(\"here\")\nhere::here()\n```\n\n::: {.cell-output .cell-output-stdout}\n```\n[1] \"/Users/clente/Documents/demo-quarto\"\n```\n:::\n\n```{.r .cell-code}\nhere::here(\"styles.css\")\n```\n\n::: {.cell-output .cell-output-stdout}\n```\n[1] \"/Users/clente/Documents/demo-quarto/styles.css\"\n```\n:::\n:::\n\n\n## 02. Bônus! Trocar idioma\n\nNo `_quarto.yml`\n\n```         \nlang: pt\n```\n\n## 03. Chunks com `#|`\n\n\n::: {.cell layout-align=\"center\"}\n::: {.cell-output-display}\n![Um gatinho bonitinho](images/gato.webp){fig-align='center' width=50%}\n:::\n:::\n\n::: {.cell layout-align=\"center\"}\n::: {.cell-output-display}\n![Um gatinho bonitinho](images/gato.webp){fig-align='center' width=50%}\n:::\n:::\n\n\nPodemos usar `knitr::convert_chunk_header()`\n\n## 04. Citações no Visual Editor\n\nSegundo @turing1937, computadores são possíveis. Segundo @stoica2018, redes sociais não são muito legais. Tidyverse: @tidyverse2019 e @R-tidyverse. Here: @R-here.\n\n``` r\nknitr::write_bib(c(\"here\", \"tidyverse\"), \"packages.bib\")\n```\n\n## 05. Include ou child\n\nUm chunk externo\n\n::: {.cell}\n\n```{.r .cell-code}\n1 + 1\n```\n\n::: {.cell-output .cell-output-stdout}\n```\n[1] 2\n```\n:::\n:::\n\n\n\n## 06. Usando parâmetros\n\n\n::: {.cell}\n\n```{.r .cell-code}\nparams$data\n```\n\n::: {.cell-output .cell-output-stdout}\n```\n[1] \"2023-03-22\"\n```\n:::\n:::\n\n\n## 07. Inline + Formatação\n\n\n::: {.cell}\n\n:::\n\n\nA base dos pinguins tem 344 linhas. Os pinguins estudados na base são Adelie, Gentoo e Chinstrap. O Pi é mais ou menos 3.14 e isso é Pi reais: R$ 3,14.\n\n## 08. Personalizar templates\n\nstyles.css\n\n## 09. Mermaid\n\n\n```{mermaid}\nflowchart LR\n  A[Hard edge] --> B(Round edge)\n  B --> C{Decision}\n  C --> D[Result one]\n  C --> E[Result two]\n```\n\n```{mermaid}\nsequenceDiagram\n  participant Alice\n  participant Bob\n  Alice->>John: Hello John, how are you?\n  loop Healthcheck\n    John->>John: Fight against hypochondria\n  end\n  Note right of John: Rational thoughts <br/>prevail!\n  John-->>Alice: Great!\n  John->>Bob: How about you?\n  Bob-->>John: Jolly good!\n```\n\n\n## 10. Font Awesome\n\n```         \nquarto install extension quarto-ext/fontawesome\n```\n\n\n{{< fa thumbs-up size=2xl >}}\n\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}
